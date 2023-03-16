@@ -1,4 +1,4 @@
-## window\_summoner - A method to mark a window and instantly move it to any active workspace in XFCE.
+## window\_summoner - A method to mark a window and instantly move it to any active workspace in XFCE
 
 The following idea demonstrates a convenient way where the user can move a marked window from any workspace to the active one in an XFCE environment.
 
