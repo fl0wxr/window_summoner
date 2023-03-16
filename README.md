@@ -75,7 +75,7 @@ The other two `movable_window_id_list.txt` , `initial_movable_window_id_list.t
 
 where the latter should be read-only and should serve as a backup for the other.
 
-1. Now depending on the maximum number of windows you intend to have marked at the same time (assuming it doesn’t surpass 10), create the following shortcuts in XFCE’s keyboard settings panel.
+3. Now depending on the maximum number of windows you intend to have marked at the same time (assuming it doesn’t surpass 10), create the following shortcuts in XFCE’s keyboard settings panel.
 
 Do the following for every keyboard integer `MOVABLE_WINDOW_IDX` you wish to be active.
 Shortcut: `Super+Shift+Key_MOVABLE_WINDOW_IDX` → Command: `python3 /home/$USER/.window_summoner/get_window_id.py MOVABLE_WINDOW_IDX` 
