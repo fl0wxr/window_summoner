@@ -2,13 +2,13 @@
 
 The following idea demonstrates a convenient way where the user can move a marked window from any workspace to the active one in an XFCE environment.
 
-1. Click on the window you would like to be marked as, say `MOVABLE_WINDOW_IDX` . Where `MOVABLE_WINDOW_IDX` can be any integer ranging from `0` to `9` .
+1. Click on the window you would like to be marked as, say `MOVABLE_WINDOW_IDX` , where `MOVABLE_WINDOW_IDX` can be any integer ranging from `0` to `9` .
 2. Press `Super+Shift+Key_MOVABLE_WINDOW_IDX` to mark that active window, and to assign its corresponding movable window ID as `MOVABLE_WINDOW_IDX` .
 3. Whenever you leave that workspace, move that window to the currently active workspace by pressing `Super+Key_MOVABLE_WINDOW_IDX` . `Key_MOVABLE_WINDOW_IDX` purely depends on the user’s keyboard-key preference.
 
 ### Installation
 
-One way to implement this concept is through the following instructions. It is worth noting that this method depend on the apt packages `xdotool` and `wmctrl` .
+One way to implement this concept is through the following instructions. It is worth noting that this method depends on the apt packages `xdotool` and `wmctrl` .
 
 1. Under the user’s home folder create a directory named as `.window_summoner` .
 2. Then navigate inside that directory and create 4 files. The first one shall be named as `get_window_id.py` and will contain the following content
@@ -67,13 +67,13 @@ To break down
   - `grep "*"`: filters for the currently active desktop/workspace, which is indicated by an asterisk (`*`) in the output of `wmctrl -d`.
   - `cut -d' ' -f1`: extracts the first field (which is the index of the desktop/workspace) from the output of `grep "*"`.
 
-The other two `movable_window_id_list.txt` , `initial_movable_window_id_list.txt` both should contain
+The remaining two files are `movable_window_id_list.txt` and `initial_movable_window_id_list.txt`. Both should contain
 
 ```
 0 0 0 0 0 0 0 0 0 0
 ```
 
-where the latter should be read-only and should serve as a backup for the other.
+where the latter file should be read-only, serving solely as an initial value prototype of the other `txt` file.
 
 3. Now depending on the maximum number of windows you intend to have marked at the same time (assuming it doesn’t surpass 10), create the following shortcuts in XFCE’s keyboard settings panel.
 
